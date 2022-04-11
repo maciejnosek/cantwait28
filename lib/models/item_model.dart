@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class ItemModel {
   ItemModel({
     required this.id,
@@ -18,5 +20,9 @@ class ItemModel {
         )
         .inDays
         .toString();
+  }
+
+  String releaseDateFormated() {
+    return DateFormat.yMMMEd().format(releaseDate);
   }
 }
